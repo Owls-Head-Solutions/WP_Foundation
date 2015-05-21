@@ -6,7 +6,7 @@ require "#{dir}/puphpet/ruby/deep_merge.rb"
 #we like to use the current project dir for dev
   text = File.open("#{dir}/puphpet/config.yaml", "rb")
   contents = text.read
-  new_contents = contents.gsub! '<%CURDIR%>', "#{dir}/html"
+  new_contents = contents.gsub! '<%CURDIR%>', dir
 
 configValues = YAML.load(new_contents)
 
