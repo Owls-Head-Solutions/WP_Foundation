@@ -91,3 +91,7 @@ Debugging
 ********************************
 This system installs XDebug into the virtual dev environment. If you have XDebug setup
 on your PHP Storm instance then it is pretty easy do efficient "break point" debugging.
+Turn on your debugger in PHP Storm (top right corner), set the debugger cookie in your browser
+with the bookmarklets here: https://www.jetbrains.com/phpstorm/marklets/, then
+set some breakpoints. PHP Storm will notify you of a new connection and pause on the code as
+it executes.
