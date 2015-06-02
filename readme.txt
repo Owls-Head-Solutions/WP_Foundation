@@ -37,6 +37,12 @@ When vagrant is finished running the inital setup you may view your website
 from the host machine at http://192.168.56.102. If you have multiple machines make
 sure to assign them different IP addresses
 
+Set the hostname to be unique in case you have multiple Vagrant machines running. Failure to set a unique hostame
+may result in failure to successfully run Vagrant
+
+On or near line 6 of config.yaml
+hostname: local.wpfoundation
+
 ********************************
 Configuration of
 Database and WordPress
@@ -63,6 +69,7 @@ WP_TITLE="WPFoundation"
 WP_USER="admin"
 WP_USER_PASS="admin"
 WP_USER_EMAIL="admin@admin.com"
+WP_IP="192.168.56.102"
 
 The DB_XXX variables in this file must match the values from the /a_install_wp_db.sh file.
 If you changed them in a_install_wp_db.sh then you must set them to match in b_install_wp.sh
@@ -70,6 +77,7 @@ If you changed them in a_install_wp_db.sh then you must set them to match in b_i
 The WP_XXX variables will set your WordPress title and create the administrative user. Set
 these values appropriately.
 
+Make sure the WP_IP value matches the IP of the machine in the config.yaml file.
 ********************************
 Getting Started
 ********************************
