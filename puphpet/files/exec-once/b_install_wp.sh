@@ -8,7 +8,7 @@ WP_TITLE="WPFoundation"
 WP_USER="admin"
 WP_USER_PASS="admin"
 WP_USER_EMAIL="admin@admin.com"
-WP_IP="192.168.56.103"
+WP_IP="192.168.56.102"
 
 cd /tmp
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
