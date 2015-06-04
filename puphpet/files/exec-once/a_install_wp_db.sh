@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MYSQL=`which mysql`
+MYSQL="$(which mysql)"
 
 DB_NAME="WP_Foundation"
 DB_USER_NAME="WP_User"
