@@ -66,6 +66,7 @@ server:
     install: '1'
     packages:
         - vim
+        - php5-gd
 users_groups:
     install: '1'
     groups: {  }
