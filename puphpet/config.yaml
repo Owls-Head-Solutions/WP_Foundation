@@ -204,14 +204,17 @@ drush:
     version: 6.3.0
 ruby:
     install: '1'
-    versions: {  }
+    versions:
+        ohswpfoundationruby:
+            default: '1'
+            version: 2.2.2
+            gems:
+                - sass
+            bundler: '1'
 python:
     install: '1'
     packages: {  }
     versions: {  }
-nodejs:
-    install: '0'
-    npm_packages: {  }
 hhvm:
     install: '0'
     nightly: 0
