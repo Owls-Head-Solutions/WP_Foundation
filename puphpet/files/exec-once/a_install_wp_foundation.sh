@@ -86,7 +86,3 @@ cp /vagrant/puphpet/files/style.scss /var/www/html/wp-content/themes/${WP_TITLE}
 cp /vagrant/puphpet/files/style.css /var/www/html/wp-content/themes/${WP_TITLE}_Theme
 
 sudo ln -s /usr/bin/nodejs /usr/bin/node
-
-cd /var/www/html
-grunt &
-

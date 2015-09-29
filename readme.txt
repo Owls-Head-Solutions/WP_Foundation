@@ -104,6 +104,11 @@ it executes.
 ********************************
 Grunt and SASS
 ********************************
+
+
+!!PHP Storm does this automatically - need to update script and write setup directions here.
+
+
 OHS uses Grunt and SASS for rapid and efficient CSS from SASS development.
 
 starting here:
@@ -144,6 +149,9 @@ Second Run and thereafter
 Scripts to run on each Vagrant Up
 ********************************
 -Autorun Grunt on Vagrant Up
+-Can we uglify?
+-What about hint?
+-minify?
 
 ********************************
 Building from GH
