@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		      sourcemap: 'none',
 		    },
 		    files: {
-		      'wp-content/themes/<PATH_TO_THEME>/style.css': 'wp-content/themes/<PATH_TO_THEME>/scss/style.scss'
+		      'wp-content/themes/<PATH_TO_THEME>/style/style.css': 'wp-content/themes/<PATH_TO_THEME>/style/style.scss'
 		    }
 		  }
 		},
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 ]
             },
 			dist: {
-				src: 'wp-content/themes/<PATH_TO_THEME>/style.css',
+				src: 'wp-content/themes/<PATH_TO_THEME>/style/style.css',
 			},
 		},
 
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 				spawn: false // add spawn option in watch task
 			},
 			css: {
-				files: 'wp-content/themes/<PATH_TO_THEME>/scss/*.scss',
+				files: 'wp-content/themes/<PATH_TO_THEME>/style/*.scss',
 				tasks: ['sass', 'postcss:dist'],
 				options: {
 					livereload: true
@@ -50,7 +50,6 @@ module.exports = function(grunt) {
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.registerTask('default',['watch']);

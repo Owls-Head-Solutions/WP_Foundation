@@ -58,7 +58,12 @@ wp rewrite flush --allow-root --hard
 sudo apt-get update
 sudo apt-get --force-yes --yes install nodejs
 sudo apt-get --force-yes --yes install npm
-#fix for "usr/bin/env: node: No such file or directory"
+
+#Install Screen
+sudo apt-get --force-yes --yes install screen
+sudo rm /etc/screenrc
+sudo cp /vagrant/puphpet/files/screenrc /etc
+
 
 
 #Install Grunt & SASS, setup new theme folder
@@ -82,7 +87,7 @@ npm install grunt-postcss --save-dev --no-bin-links
 mkdir /var/www/html/wp-content/themes/${WP_TITLE}_Theme
 #mkdir /var/www/html/wp-content/themes/${WP_TITLE}_Theme/style
 mkdir /var/www/html/wp-content/themes/${WP_TITLE}_Theme/scss
-cp /vagrant/puphpet/files/style.scss /var/www/html/wp-content/themes/${WP_TITLE}_Theme/scss
-cp /vagrant/puphpet/files/style.css /var/www/html/wp-content/themes/${WP_TITLE}_Theme
+cp /vagrant/puphpet/files/style.scss /var/www/html/wp-content/themes/${WP_TITLE}_Theme/style
 
+#fix for "usr/bin/env: node: No such file or directory"
 sudo ln -s /usr/bin/nodejs /usr/bin/node

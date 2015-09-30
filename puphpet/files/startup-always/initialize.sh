@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /var/www/html
-grunt &
+screen -d -m -S GruntWatch grunt

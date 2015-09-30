@@ -18,6 +18,7 @@ Requirements
 Oracle Virtual Box
 Vagrant
 PHP
+Ruby
 
 ********************************
 Recommended
