@@ -149,7 +149,7 @@ Second Run and thereafter
 ********************************
 Scripts to run on each Vagrant Up
 ********************************
--Autorun Grunt on Vagrant Up
+-Autorun Grunt on Vagrant Up (Done with Screen, document it)
 -Can we uglify?
 -What about hint?
 -minify?
