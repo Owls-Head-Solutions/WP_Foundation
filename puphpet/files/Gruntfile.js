@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		      sourcemap: 'none',
 		    },
 		    files: {
-		      'wp-content/themes/<PATH_TO_THEME>/style/style.css': 'wp-content/themes/<PATH_TO_THEME>/style/style.scss'
+		      'wp-content/themes/<PATH_TO_THEME>/style.css': 'wp-content/themes/<PATH_TO_THEME>/style.scss'
 		    }
 		  }
 		},
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 ]
             },
 			dist: {
-				src: 'wp-content/themes/<PATH_TO_THEME>/style/style.css',
+				src: 'wp-content/themes/<PATH_TO_THEME>/style.css',
 			},
 		},
 
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 				spawn: false // add spawn option in watch task
 			},
 			css: {
-				files: 'wp-content/themes/<PATH_TO_THEME>/style/*.scss',
+				files: 'wp-content/themes/<PATH_TO_THEME>/*.scss',
 				tasks: ['sass', 'postcss:dist'],
 				options: {
 					livereload: true

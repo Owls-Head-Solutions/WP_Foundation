@@ -64,8 +64,6 @@ sudo apt-get --force-yes --yes install screen
 sudo rm /etc/screenrc
 sudo cp /vagrant/puphpet/files/screenrc /etc
 
-
-
 #Install Grunt & SASS, setup new theme folder
 cd /var/www/html
 cp /vagrant/puphpet/files/package.json .
@@ -86,8 +84,23 @@ npm install grunt-postcss --save-dev --no-bin-links
 
 mkdir /var/www/html/wp-content/themes/${WP_TITLE}_Theme
 #mkdir /var/www/html/wp-content/themes/${WP_TITLE}_Theme/style
-mkdir /var/www/html/wp-content/themes/${WP_TITLE}_Theme/scss
-cp /vagrant/puphpet/files/style.scss /var/www/html/wp-content/themes/${WP_TITLE}_Theme/style
+cp /vagrant/puphpet/files/style.scss /var/www/html/wp-content/themes/${WP_TITLE}_Theme
 
 #fix for "usr/bin/env: node: No such file or directory"
 sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+#once we are done with this script, copy this script file out to files so it never runs again - also copy in the new script used to clone the new project
+cp /vagrant/puphpet/files/a_clone_wp_project.sh /vagrant/puphpet/files/exec-once/a_clone_wp_project.sh
+
+sed -i -e "s,<WPF_DB_NAME>,${DB_NAME}_Theme,g" /vagrant/puphpet/files/exec-once/a_clone_wp_project.sh
+sed -i -e "s,<WPF_DB_USER>,${DB_USER_NAME}_Theme,g" /vagrant/puphpet/files/exec-once/a_clone_wp_project.sh
+sed -i -e "s,<WPF_DB_PASS>,${DB_PASS}_Theme,g" /vagrant/puphpet/files/exec-once/a_clone_wp_project.sh
+
+sed -i -e "s,<WPF_WP_TITLE>,${WP_TITLE}_Theme,g" /vagrant/puphpet/files/exec-once/a_clone_wp_project.sh
+sed -i -e "s,<WPF_WP_USER>,${WP_USER}_Theme,g" /vagrant/puphpet/files/exec-once/a_clone_wp_project.sh
+sed -i -e "s,<WPF_WP_PSWD>,${WP_USER_PASS}_Theme,g" /vagrant/puphpet/files/exec-once/a_clone_wp_project.sh
+sed -i -e "s,<WPF_WP_EMAIL>,${WP_USER_EMAIL}_Theme,g" /vagrant/puphpet/files/exec-once/a_clone_wp_project.sh
+sed -i -e "s,<WPF_WP_IP>,${WP_IP}_Theme,g" /vagrant/puphpet/files/exec-once/a_clone_wp_project.sh
+
+cp /vagrant/puphpet/files/exec-once/a_install_wp_foundation.sh /vagrant/puphpet/files/a_install_wp_foundation.sh
+rm /vagrant/puphpet/files/exec-once/a_install_wp_foundation.sh
