@@ -63,7 +63,7 @@ sure to assign them different IP addresses!
 
 II. Configuration of the Database, WordPress and Web Server
 
-The configuration is managed by the file puphpet/files/exec-once/a_install_wp_foundation.sh
+The configuration is managed by the file puphpet/files/exec-once/a_install_ohs_wp_foundation_I.sh
 This file installs the database, wp-cli, wp and various other necessary components. By default the top of the file
 looks as such:
 
