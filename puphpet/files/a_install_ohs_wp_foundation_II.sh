@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f /var/www/html/ohs_flag.txt ]; then
+if [ ! -f /var/www/ohs_flag.txt ]; then
 
     #determin mysql binary location
     MYSQL="$(which mysql)"
@@ -41,9 +41,8 @@ if [ -f /var/www/html/ohs_flag.txt ]; then
     sudo rm /etc/screenrc
     sudo cp /vagrant/puphpet/files/screenrc /etc
 
-
-    sed -i -e "s,<XXXXX>,-Foundation II has been completed,g"
-    mv /var/www/html/ohs_flag_II.txt
+    cp /vagrant/puphpet/files/ohs_flag.txt /var/www/ohs_flag.txt
+    sed -i -e "s,<XXXXX>,-Foundation II has been completed,g" /var/www/ohs_flag.txt
 
     service apache2 reload
 fi

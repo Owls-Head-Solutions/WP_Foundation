@@ -105,4 +105,4 @@ sed -i -e "s,<WPF_WP_EMAIL>,${WP_USER_EMAIL},g" /vagrant/puphpet/files/exec-once
 sed -i -e "s,<WPF_WP_IP>,${WP_IP},g" /vagrant/puphpet/files/exec-once/a_install_ohs_wp_foundation_II.sh
 
 #create hte flag to let the system know foundation I has been run
-cp /vagrant/puphpet/files/ohs_flag_I.txt /var/www/html/ohs_flag_I.txt
+cp /vagrant/puphpet/files/ohs_flag.txt /var/www/ohs_flag.txt
