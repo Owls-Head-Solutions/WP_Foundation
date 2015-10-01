@@ -102,6 +102,9 @@ file is required. Before every commit it is wise to extract the WordPress databa
 puphpet/files folder. The file name must be "backup_latest.sql". If the file is there then the first time a new developer
 starts the project it will automatically push the backup_latest.sql into the virtual machine's local database.
 
+NOTE II:
+Don't forget to do an "ADD" prior to committing to GIT for the first time as new files are generated and moved during the setup phases.
+
 ********************************
 Debugging
 ********************************
