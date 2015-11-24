@@ -5,3 +5,5 @@
 *.* text eol=lf
 *.sh text eol=lf
 *.png    binary
+*.svg    binary
+*.jpg    binary

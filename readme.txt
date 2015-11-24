@@ -146,5 +146,10 @@ Building from GH
 2.) Exclude files not needed for release (SASS stuff, etc)
 3.) Get the DB
 
+********************************
+Allow integration from hosting service
+********************************
+-Can we allow easy push and pull from WPEngine or SiteGround?
+
 
 
