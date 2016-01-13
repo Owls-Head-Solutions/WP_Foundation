@@ -8,7 +8,7 @@ DB_NAME="WP_Foundation"
 DB_USER_NAME="WP_User"
 DB_PASS="OHSWPFoundationPW"
 
-WP_TITLE="WPFoundation"
+WP_TITLE="WPFoundation"  #NO SPACES ALLOWED!
 WP_USER="admin"
 WP_USER_PASS="admin"
 WP_USER_EMAIL="admin@admin.com"
@@ -104,3 +104,4 @@ sed -i -e "s,<WPF_WP_IP>,${WP_IP}_Theme,g" /vagrant/puphpet/files/exec-once/a_cl
 
 cp /vagrant/puphpet/files/exec-once/a_install_wp_foundation.sh /vagrant/puphpet/files/a_install_wp_foundation.sh
 rm /vagrant/puphpet/files/exec-once/a_install_wp_foundation.sh
+mysqldump -udbuser -p123 Advocacy_Lab_Theme > /vagrant/puphpet/files/backup_latest.sql

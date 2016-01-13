@@ -169,7 +169,7 @@ php:
                 security.limit_extensions: .php
                 user: www-user
                 group: www-data
-    composer: '1'
+    composer: '0'
     composer_home: ''
 xdebug:
     install: '1'
